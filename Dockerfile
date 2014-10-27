@@ -17,6 +17,8 @@ ADD change_admin_password_func.sh /change_admin_password_func.sh
 ADD enable_secure_admin.sh /enable_secure_admin.sh
 RUN chmod +x /*.sh
 
+VOLUME /opt/glassfish4/glassfish/domains/domain1/autodeploy
+
 # 4848 (administration), 8080 (HTTP listener), 8181 (HTTPS listener)
 EXPOSE 4848 8080 8181
 
